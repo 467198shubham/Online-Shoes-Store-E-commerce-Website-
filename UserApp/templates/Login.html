@@ -1,0 +1,27 @@
+ {%extends "master.html"%} {%block content%}{%load static%}
+<link rel="stylesheet" type="text/css" href="{%static '\css\login.css'%}">
+
+
+<body>
+    <h2><b>Login</b></h2><br>
+    <div class="login">
+
+        <form method="POST">
+            {% csrf_token %}
+            <label><b>User Name:     
+        </b>    
+        </label>
+            <input type="text" class='input' name="Username" id="Username" placeholder="Username">
+            <br><br>
+            <label><b>Password  :  </b>    
+        </label>
+            <input type="Password" class='input' name="Password" id="Password" placeholder="Password">
+            <br><br>
+            <input type="submit" name="log" id="log" value="Log In">
+            <br><br>
+
+
+
+        </form>
+    </div>
+</body> {%endblock%}

@@ -1,0 +1,38 @@
+{%extends "master.html"%} {%block content%}
+<div class="container">
+    <div class="row">
+        <h1>Make Payment</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table class='table'>
+                <tr>
+                    <td>Card No</td>
+                    <td><input type='text' name='cardno'></td>
+                </tr>
+
+                <tr>
+                    <td>Cvv No</td>
+                    <td><input type='text' name='cvv'></td>
+
+                </tr>
+                <tr>
+                    <td>Expiry</td>
+                    <td><input type='text' name='expiry'></td>
+
+                </tr>
+                <tr>
+                    <td>Total Amount</td>
+                    <td>{{request.session.Total}}</td>
+
+                </tr>
+                <tr>
+                    <td><button type='submit' class="button btn-success">Make Payment</button></td>
+                    <td></td>
+
+                </tr>
+
+            </table>
+        </form>
+    </div>
+
+</div><br><br> {%endblock%}

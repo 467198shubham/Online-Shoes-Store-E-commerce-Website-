@@ -1,0 +1,67 @@
+{%extends "master.html"%} {%block content%}
+<div class="container">
+    <div class="row">
+        <h1>Shoes Details</h1>
+        <form method='POST' action='/addToCart'>
+            {%csrf_token %}
+            <table class='table'>
+
+
+
+                <tr>
+                    <td>Shoes ID</td>
+                    <!-- <td>{{cake.id}}<input type='hidden' name='cakeid' value='{{cake.id}}' /></td>-->
+                    <td>{{shoes.id}}<input type='hidden' name='shoesid' value='{{shoes.id}}' /></td>
+                </tr>
+                <tr>
+                    <td>Shoes Name</td>
+                    <!-- <td>{{cake.cakename}}<input type='hidden' name='cakename' value='{{cake.cakename}}' /></td>-->
+                    <td>{{shoes.shoesName}}<input type='hidden' name='shoesName' value='{{shoes.shoesName}}' /></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td>{{shoes.price}}<input type='hidden' name='shoesprice' value='{{shoes.price}}' /></td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>{{shoes.description}}</td </tr>
+                    <tr>
+                        <td>Images</td>
+                        <td><img src="{{shoes.imageurl.url}}" alt="No image found" width='350' ,height='450'></td>
+                    </tr>
+                    <tr>
+                        <td>Category</td>
+                        <td>{{shoes.category}}</td>
+
+                    </tr>
+                    <tr>
+                        <td>Quantity</td>
+
+                        <td><select name="qty">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select></td>
+
+                    </tr>
+
+                    <tr>
+                        <td><button type='submit' class="button btn-success">Add To Cart</button></td>
+                        <td></td>
+
+                    </tr>
+
+
+
+            </table>
+        </form>
+    </div>
+
+</div><br><br> {% endblock %}

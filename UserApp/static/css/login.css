@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fcf9f9;
+    font-family: 'Arial';
+}
+
+.login {
+    width: 450px;
+    overflow: hidden;
+    margin: auto;
+    margin: 20 0 0 450px;
+    padding: 80px;
+    background: #1d0707;
+    border-top: 30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #080808;
+    padding: 10px;
+}
+
+label {
+    color: #853939;
+    font-size: 17px;
+}
+
+.Username {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+.Password {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+.log {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: #853939;
+}
+
+span {
+    color: #853939;
+    font-size: 17px;
+}

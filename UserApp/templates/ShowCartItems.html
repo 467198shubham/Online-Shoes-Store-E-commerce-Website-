@@ -1,0 +1,67 @@
+{%extends "master.html"%} {%block content%}
+<style>
+    .h11 {
+        padding-top: 0px;
+        padding-bottom: 30px;
+        color: #f15050;
+        text-align: center;
+    }
+    
+    .th1 {
+        color: #f15050;
+        text-align: center;
+    }
+    
+    .th2 {
+        color: #853939;
+    }
+    
+    .table {
+        background-color: #1d0707;
+        border: 0in;
+        text-align: center;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <h1 class='h11'>CART ITEMS</h1>
+
+        <table class='table'>
+            <tr>
+                <th class='th1'>Id</th>
+                <th class='th1'>Shoes Name</th>
+                <th class='th1'>Price</th>
+                <th class='th1'>Qty</th>
+                <th class='th1'></th>
+
+
+            </tr>
+            {%for item in cartitems%}
+
+            <form method="post" action='RemoveFromCart'>
+                {%csrf_token %}
+                <tr>
+                    <td class='th2'>{{item.id}}<input type='hidden' ,name='cart_id' ,value='{{item.id}}' /></td>
+                    <!--<td>{{item.cake.cakename}}</td>-->
+                    <td class='th2'>{{item.shoes.shoesName}}</td>
+                    <!-- <td>{{item.cake.price}}</td>-->
+                    <td class='th2'>{{item.shoes.price}}</td>
+
+                    <td class='th2'>{{item.qty}}</td>
+
+                    <td><button class="btn btn-primary" type='submit'>Remove</button></td>
+                </tr>
+            </form>
+            {%endfor%}
+
+        </table>
+    </div>
+    <hr/>
+    <h2 style="color:#853939">Total = {{request.session.Total}} </h2><br><br>
+
+    <td><a href="MakePayment.html" class="btn btn-primary" role="button" aria-disabled="true">MakePayment</a></td>
+
+</div><br><br> {%endblock%}
+
+<a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+<a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>

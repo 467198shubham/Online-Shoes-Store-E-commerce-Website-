@@ -1,0 +1,41 @@
+ {%extends "master.html"%} {%block content%} {%load static%}
+<link rel="stylesheet" type="text/css" href="{%static '\css\ShowShoes.css'%}">
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 style=color:aliceblue class="text-center">My Shoes</h1>
+            <table class='table'>
+                <tr>
+                    <th>Id</th>
+                    <th>Shoes Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Images</th>
+                    <th>Category</th>
+                    <th></th>
+                </tr>
+                <!--{for cake in cakes} -->
+                {%for shoes in shoe%}
+                <tr>
+                    <!--<td>{{cake.id}}</td> -->
+                    <td style=color:aliceblue>{{shoes.id}}</td>
+                    <!--<td>{{cake.cakename}}</td> -->
+                    <td style=color:aliceblue>{{shoes.shoesName}}</td>
+                    <!--<td>{{cake.price}}</td> -->
+                    <td style=color:aliceblue>{{shoes.price}}</td>
+                    <!--<td>{{cake.description}}</td> -->
+                    <td style=color:aliceblue>{{shoes.description}}</td>
+                    <!--<td><img src="{{cake.imageurl.url}}" alt="No Image Found" width='150px' height='110px'></td> -->
+                    <td><img src="{{shoes.imageurl.url}}" alt="No Image Found" width='150px' height='110px'></td>
+                    <!--<td>{{cake.category}}</td>-->
+                    <td style=color:aliceblue>{{shoes.category}}</td>
+                    <td>
+                        <!--<a href='/ViewCakeDetails/{{cake.id}}'>View Details</a></td>-->
+                        <a href='/ViewShoesDetails/{{shoes.id}}'>View Details</a></td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+
+    </div><br><br></body> {% endblock content %}

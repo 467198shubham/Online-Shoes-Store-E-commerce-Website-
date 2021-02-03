@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+    color: aliceblue;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+table {
+    border: 1px solid rgb(197, 195, 195);
+}
+
+th {
+    color: aliceblue;
+}
+
+body {
+    background-color: #1d0707;
+}

@@ -1,0 +1,28 @@
+{%extends "master.html"%} {%block content%}
+<div class="container">
+    <div class="row">
+        <h1>Sign Up </h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table class='table'>
+                <tr>
+                    <td>Enter Username</td>
+                    <td><input type='text' name='Username'></td>
+                </tr>
+
+                <tr>
+                    <td>Enter Password</td>
+                    <td><input type='text' name='Password'></td>
+
+                </tr>
+                <tr>
+                    <td><button type='submit' class="button btn-success">SignUp</button></td>
+                    <td></td>
+
+                </tr>
+
+            </table>
+        </form>
+    </div>
+
+</div><br><br> {%endblock%}
